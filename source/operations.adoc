@@ -13,7 +13,7 @@ include::config.adoc[]
 [[efspo]]
 = Eclipse Foundation Specification Operations Guide
 
-Version {revnumber}. Effective 2021-11-01. Updated {docdate}.
+This operations guide applies to the Eclipse Foundation Specification Process, version {revnumber}. Updated {docdate}.
 
 toc::[]
 
@@ -638,9 +638,9 @@ Will a participant representative be retired from a specification project when t
 No. A participant representative is indistinguishable from any other committer and so retains their committer status even after changing employers. After changing employers, a committer may require new committer agreements, but once those are in place, the committer retains all privileges. In the event that a committer changing employers leaves a member participant unrepresented, that member participant may appoint a new participant representative.
 
 [#efspo-patents]
-=== Patents and Specifications
+== Appendix A: Patents and Specifications
 
-''This section is derived from https://eclipse-foundation.blog/2021/05/13/on-patents-and-specifications/[On Patents and Specifications] by Mike Milinkovich, published on May 13/2021.''
+_This section is derived from https://eclipse-foundation.blog/2021/05/13/on-patents-and-specifications/[On Patents and Specifications] by Mike Milinkovich, published on May 13/2021._
 
 We’ve been fielding a number of questions lately about the intersection of our spec process and patents. A couple of these community discussions have gone off in directions that are off target, factually incorrect, or both. Therefore, the purpose of this short FAQ is to explain the patent license options provided by the Eclipse Foundation Intellectual Property Policy for use by specifications developed by specification projects under the Eclipse Foundation Specification Process (EFSP). 
 
