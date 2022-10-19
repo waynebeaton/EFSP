@@ -36,6 +36,9 @@
 :edpCreationReviewUrl: {edpUrl}#6_3_1_Creation_Review
 :edpReleaseReviewUrl: {edpUrl}#6_3_3_Release_Review
 
+:efslUrl: https://www.eclipse.org/legal/efsl.php
+:tckLicenseUrl: https://www.eclipse.org/legal/tck.php
+
 :operationsUrl: link:./operations.php
 :operationsPatentLicenseUrl: {operationsUrl}#efspo-patents
 
@@ -50,6 +53,10 @@
 :handbookStartingUrl: {handbookUrl}#starting
 
 :emoEmail: mailto:emo@eclipse-foundation.org
+:licenseEmail: license@eclipse-foundation.org
+:licenseEmailUrl: mailto:{licenseEmail}
+:tckEmail: tck@eclipse.org
+:tckMailUrl: mailto:{tckEmail}
 
 :forgeName: Eclipse
 :aforgeName: an Eclipse

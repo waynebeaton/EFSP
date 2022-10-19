@@ -594,6 +594,37 @@ The practical implementation of aspects of the process are not defined by the EF
 * Requirements/guidelines to pass a progress/release review, along with timing of the review itself; and
 * A standard means of describing relationships between specifications.
 
+[#efspo-compatible-implementations]
+== Compatible Implementations
+
+In order to make claims regarding compatibility of your implementation with a specification, you must:
+
+* Satisfy the requirements of the Final Specification; 
+* Pass the Final Specification's TCK (that is, the _released_ version of the TCK); and
+* Satisfy the requirements of the {tckLicenseUrl}[Eclipse Foundation TCK License].
+
+The TCK requires that you post a durable link to your TCK results on a public website (that is, the results must be accessible to anybody who cares to review them for as long as the Compatible Implementation is available) and you must send a link to those results to {tckEmail}.
+
+These requirements apply to open and closed source implementations of a specification. This includes {forgeName} projects that provide Compatible Implementations included in a specification release.
+
+[NOTE]
+====
+There's an obvious "chicken and egg" problem with the requirement that a Compatible Implementation that's included with a specification release must pass the release version of the TCK: to be ratified as a Final Specification, a specification must have a Compatible Implementation based on the released version of the TCK, but an implementation cannot be considered a Compatible Implementation until it passes the released version of the TCK.
+
+It helps to not think about it too hard. Test the Compatible Implementation with the pre-release version of the TCK and then run to produce TCK results immediately after the specification is ratified as a Final Specification.
+====
+
+=== TCK License
+
+In order to be able to claim compatibility with a specification, the {tckLicenseUrl}[Eclipse Foundation TCK License] requires that you send your TCK results to {tckEmail}. The note is a means by which you satisfy the terms of the TCK license by _notifying_ the Eclipse Foundation of the results; it is not a request to _approve_ the results. The Eclipse Foundation keeps a record of the results; it does not approve the results.
+
+[NOTE]
+====
+The TCK inbox has a perpetual autoresponder that says (in part): "If your message contains a link to your TCK test results showing full and complete satisfaction of all requirements as required by the Eclipse Foundation's TCK License, you may consider that requirement of the TCK License complete." It also includes links to the various branding programmes. The Eclipse Foundation does review the messages send to this inbox, but -- other than the autoreponder -- we never reply to messages sent to this inbox.
+
+Direct any questions that you have about the license to {licenseEmail}.
+====
+
 [[efspo-faq]]
 == Frequently Asked Questions
 
