@@ -50,3 +50,8 @@
 :handbookStartingUrl: {handbookUrl}#starting
 
 :emoEmail: mailto:emo@eclipse-foundation.org
+
+:forgeName: Eclipse
+:aforgeName: an Eclipse
+:forgeMachineName: eclipse
+:createUrl: https://projects.eclipse.org/node/add/project-proposal
