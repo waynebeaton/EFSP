@@ -1,0 +1,80 @@
+////
+ * Copyright (C) 2023 Eclipse Foundation, Inc. and others. 
+ * 
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+////
+
+FOR ILLUSTRATION PURPOSES ONLY
+
+This FAQ provides a general overview of the Eclipse Foundation’s specification process (EFSP), in particular in relation to the intellectual property flows associated with specification. It is not intended to be exhaustive, but rather to provide answers to many commonly asked questions and to provide examples that might provide further insight. It is also not intended to serve as legal advice, and readers are encouraged to seek independent legal counsel in relation to these flows. The relevant documents, which can be found or are linked to on our {governanceDocumentsUrl}[governance documents] page and our {legalDocumentsUrl}[legal resources] page, include:
+
+- {efspUrl}[Eclipse Foundation Specification Process];
+- {ipPolicyUrl}[Eclipse Foundation IP Policy];
+- {mccaUrl}[Member Committer and Contributor Agreement];
+- {efslUrl}[Eclipse Foundation Specification License]; and
+- {tckLicenseUrl}[Eclipse Foundation Technology Compatibility Kit License]
+
+[#efsp-ipflows-faq]
+== Frequently Asked Questions
+
+Does the Eclipse Foundation produce specifications today?  ::
+
+Yes. The Eclipse Foundation has a fully functional specification process that is used by a number of working groups to produce high-quality (IP-clean) specifications such as AsciiDoc, MicroProfile, Jakarta EE, and Sparkplug. Jakarta EE is by far the biggest example of open source specifications in place today. As the successor to Java EE, Jakarta EE is both the open source specification and compatibility mark for a multi-billion dollar ecosystem, with the major suppliers in that ecosystem all participating. At this time, Jakarta EE has close to fifty individual specification projects, three of which are deemed as “Platforms”.
+
+Does the Eclipse Foundation have its own specification process?  ::
+
+The Eclipse Foundation has a well-defined {efspUrl}[specification process] that covers the full cycle of open specification development. The specifications themselves are developed as open source projects governed under the Eclipse Public License 2.0 (`EPL-2.0`), the Apache License 2.0 (`Apache-2.0`), or the Eclipse Distribution License 1.0 (`BSD-3-Clause`). When the specifications are completed, they are then re-licensed under the {efslUrl}[Eclipse Foundation Specification License], which is based on--and is very similar to--the well-known W3C License.
++
+The Eclipse Foundation is also an ISO JTC1 PAS submitter. As an example of the benefit of this, as of early 2023, the Eclipse Foundation is in the process of turning the Sparkplug specification into an ISO/IEC standard. The specification license permits independent implementations under any form of license, including proprietary ones.
+
+Can the specification process be modified for individual industry initiatives?  ::
+
+The Eclipse Foundation Specification Process is intended to be a template which can be specialized for the needs of different groups. Each working group may establish “customizations” based on a consensus of the working group’s steering committee, subject to approval by the Eclipse Foundation. For example, a working group may choose to have a shorter or longer period for the approval of final specifications. For more details on what and how can be customized, please see the {operationsSpecialising}[Specializing the EFSP].
+
+What are the basic elements of an Eclipse specification?  ::
+
+Each specification requires three components: a specification document (under the specification license referenced above), at least one open source compatible implementation available under one of the Eclipse Public License 2.0 (`EPL-2.0`), the Apache License 2.0 (`Apache-2.0`), or the Eclipse Distribution License 1.0 (`BSD-3-Clause`), and a Technology Compatibility Kit (“TCK”). The TCK is also developed as an open source project and when made final the binary is re-licensed under the {tckLicenseUrl}[Eclipse Foundation TCK License]. Compatibility is done via self-certification by passing the TCK and making those results publicly available. 
++
+A specification version can only be declared as "final" when all three assets (specification, TCK, compliant implementation) are in place.
+
+What patent licenses are used by Eclipse Foundation specifications? ::
+
+As per the Eclipse Foundation's Intellectual Property Policy, specification patent licenses are always on a royalty-free basis. Royalty-free patent grants happen when member companies appoint a Participant representative to the specification project developing the actual specification. Merely joining a working group that does specifications does not implicate a member organization’s patent portfolio. Putting a participant representative into a Specification Project does. See Section VI of the {ipPolicyUrl}[IP Policy] for specific details.
++
+There are two choices of patent license: The Compatible Patent License vests the royalty-free grants when an implementation passes the TCK. The Implementation Patent License grants to all implementors of the specification whether they pass the TCK or not. The latter is even more open source friendly because it makes it clear that there is no patent exposure while an OSS implementation is under development. The Implementation Patent License is our default.
+
+Patent rights are not addressed in the Contribution or Committer Agreements. How does that work? ::
+
+Patent grants are not included in any of our contribution or committer agreements. That said, patent licenses are an intrinsic part of our intellectual property management processes. They are simply covered elsewhere.
++
+For open source projects, royalty free patent licenses are provided via the open source licenses used by the projects. For example, the Eclipse Public License (`EPL-2.0`) and Apache License (`Apache-2.0`) licenses have patent provisions. It is important to note that the Eclipse Foundation (unlike the Apache Software Foundation) does not acquire any intellectual property in its projects other than: (a) trademarks, and (b) a limited copyright license to ensure that the Eclipse Foundation has clear rights to turn project contributions into specifications, even if the project is using a copyleft license such as the `EPL-2.0`.
++
+The Eclipse Foundation follows a policy of symmetrical in-bound and out-bound licenses. We accept contributions under the project's open source license under the committer and contributor agreements and the DCO as referenced therein, and then license those contributions out to downstream consumers under the same project license. That is why the license provisions under the committer and contributor agreements may seem incomplete: they are in the licenses, not the contribution agreements.
++
+For specifications, royalty free patent licenses are granted via the provisions of Section VI of our Intellectual Property Policy, which members are bound to by signing the Membership Agreement. Such patent licenses are triggered by appointing a Participant Representative in a Specification Project chartered by a Working Group. It is important to note that the royalty free patent licenses provided to specifications are far broader than those provided for under the open source licenses. For our specifications, all Participants in a specification project grant royalty-free licenses to all of their patents which would be necessarily infringed by implementers or users of the specification. Such licenses are not tied to their contributions to the specification; they cover the entire specification. 
++
+At the risk of repeating ourselves, please note that these specification patent licenses are not triggered by joining the working group. They are triggered by direct participation in a specification project. See Section VI of the {ipPolicyUrl}[IP Policy] for specific details.
+
+Is membership required to claim compatibility with a specification? ::
+
+No. Claims that any implementation is compatible with an Eclipse Foundation Specification can be made after executing and passing the specification’s TCK. Eclipse does have a compatibility program that working groups generating specifications can leverage. Like the specification process, individual working groups may “customize” the compatibility program should they choose. See the Jakarta EE https://jakarta.ee/compatibility/get-listed/[_how to get listed_] document for a check list of what's involved to declare a product as Jakarta EE compatible and obtain the Jakarta EE compatibility logo for your products.
++
+The only time an implementor of a specification ever needs to become a Member of the Eclipse Foundation is if they want to license the compatibility trademark. Some working groups such as MicroProfile don't have a compatibility trademark program and rely entirely on open source declarations of compatibility.
+
+Does a specification have a reference implementation? And must it be an Eclipse open source project? ::
+
+We do not have normative reference implementations. By “normative reference implementation” we mean an implementation which can be referenced to provide additional guidance in instances where the specification and/or TCK are ambiguous. We have compatible implementations. The key difference, of course, is that our compatible implementations are not intended to be normative and there is no special implementation that can be turned to as an additional definition of compatibility.
++
+It is not required that the implementation used to validate the compatible implementation be hosted at the Eclipse Foundation, though it certainly simplifies things if it is. Therefore, it is strongly encouraged that there be an Eclipse implementation of the specification. From a practical point of view, the Eclipse project is typically developed in parallel with the specification. But formally, there must be at least one open source compatible implementation that passes the TCK before the specification can be declared "final".
+
+What’s next for specifications at Eclipse? ::
+
+Next up is to leverage our status as an ISO/IEC JTC1 PAS submitter to turn our specifications into international standards. This is already underway (as of 2023) for the Sparkplug specification for machine interoperability.
++
+Currently, our specification process is all about software and it is entirely a self-certification model. We have not yet done specifications of cyber-physical systems that combine hardware and software.
++
+Also, Eclipse does not run any in-house processes to validate the compatibility of implementations. We have ideas on how to do such things, but like most things we do at Eclipse, we will develop such a process as the needs of a particular industry collaboration require us to do so.

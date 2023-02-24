@@ -12,19 +12,21 @@
 
 :membershipLevelsUrl: https://www.eclipse.org/membership/#tab-levels
 :bylawsUrl: https://www.eclipse.org/org/documents/eclipse_foundation-bylaws.pdf
-:efspUrl: https://www.eclipse.org/projects/efsp
 :ipPolicyUrl: http://eclipse.org/org/documents/Eclipse_IP_Policy.pdf
 :ewgpUrl: https://www.eclipse.org/org/workinggroups/process.php
 :ewgogUrl: https://www.eclipse.org/org/workinggroups/operations.php
 
+:efspUrl: https://www.eclipse.org/projects/efsp
 :compatibleImplementationUrl: {efspUrl}#efsp-compatible
+:efspRatificationUrl: {efspUrl}#efsp-ratification
 
 :ewgpMemberRoles: {ewgpUrl}#wg-member-roles
 :ewgpAgreements: {ewgpUrl}#wg-agreements
 
 :membershipAgreementUrl: https://www.eclipse.org/org/documents/eclipse-foundation-membership-agreement.pdf
+:mccaUrl: https://www.eclipse.org/legal/committer_process/EclipseMemberCommitterAgreement.pdf
 
-:efspRatificationUrl: {efspUrl}#efsp-ratification
+:governanceDocumentsUrl: https://www.eclipse.org/org/documents/
 
 :edpUrl: https://www.eclipse.org/projects/dev_process
 :edpStructureUrl: {edpUrl}#4_Structure_and_Organization
@@ -36,11 +38,13 @@
 :edpCreationReviewUrl: {edpUrl}#6_3_1_Creation_Review
 :edpReleaseReviewUrl: {edpUrl}#6_3_3_Release_Review
 
-:efslUrl: https://www.eclipse.org/legal/efsl.php
-:tckLicenseUrl: https://www.eclipse.org/legal/tck.php
+:legalDocumentsUrl: https://www.eclipse.org/legal
+:efslUrl: {legalDocumentsUrl}/efsl.php
+:tckLicenseUrl: {legalDocumentsUrl}/tck.php
 
 :operationsUrl: link:./operations.php
 :operationsPatentLicenseUrl: {operationsUrl}#efspo-patents
+:operationsSpecialising: {operationsUrl}#efspo-specializing
 
 :handbookUrl: https://www.eclipse.org/projects/handbook
 :handbookCommitterElectionsUrl: {handbookUrl}#elections-committer
@@ -51,6 +55,7 @@
 :handbookReleaseUrl: {handbookUrl}#release
 :handbookReleaseAndProgressReviewsUrl: {handbookUrl}#release-review
 :handbookStartingUrl: {handbookUrl}#starting
+:handbookIpUrl: {handbookUrl}#ip
 
 :emoEmail: mailto:emo@eclipse-foundation.org
 :licenseEmail: license@eclipse-foundation.org
