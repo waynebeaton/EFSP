@@ -416,7 +416,7 @@ A creation review is required before a new specification project is created.
 
 [TIP]
 ====
-In the case where an existing Eclipse open source project is converted into a specification project, or a specification moves from working under the supervision of one working group to another, the creation review will be combined with a restructuring review.
+In the case where an existing Eclipse open source project is converted into a specification project, or a specification moves from working under the supervision of one working group to another, the creation review will be combined with a xref:efspo-reviews-restructuring[restructuring review].
 ====
 
 Creation reviews are tracked and managed by the EMO. A creation review requires a <<efspo-ballot,ballot>> of the specification committee. The ballot may be initiated directly by a member of the specification committee; the EMO can provide assistance if required.
@@ -517,6 +517,24 @@ When determining how to vote in a release review ballot, the question that speci
 
 Progress Reviews are posted for community review for one week.
 
+[#efspo-reviews-restructuring]
+=== Restructuring Review
+
+A restructuring review is required whenever the nature of a project is changed. 
+
+Examples include (but are not limited to):
+
+- Moving significant functionality (e.g., an entire Git repository) from one project to another;
+- Splitting an existing project into multiple separate projects;
+- Combining multiple separate projects into a single project;
+- Rolling functionality from one project into another; or 
+- Changing a regular open source project into a specification project.
+
+[TIP]
+====
+Engage with the {emoEmail}[EMO] to discuss options and requirements when the nature of a project must be changed. 
+====
+
 [#efspo-ballots]
 == Ballots
 
@@ -538,7 +556,7 @@ The ballot initiation message does not need to follow these templates; they are 
 ____
 Title: BALLOT: `<specification>` Specification Project Release Review
 
-Your vote is required to approve and ratify the release of `<specification>`.
+Your vote is required to approve and ratify the release of `<specification>` `<version>`.
 
 The Eclipse Foundation Specification Process (EFSP) requires a successful ballot of the specification committee in order to ratify the products of this release as a Final Specification (as that term is defined in the EFSP).
 
@@ -548,6 +566,14 @@ Per the process, this will be a `<duration>` day ballot, ending on `<date>` that
 
 Specification committee representatives, your vote is hereby requested. Please respond with pass:[+1] (positive), pass:[+0] (abstain), or pass:[-1] (reject).  Any feedback that you can provide to support your vote will be appreciated.
 ____
+
+The `<details>` for a xref:efspo-reviews-release[release review] ballot should include:
+
+* Links to relevant source code repositories;
+* Links to the Specification Version (release candidate) artifacts;
+* A brief description of the progress made;
+* A description of changes (if any) to the release plan; and
+* A description of issues (if any) that should be brought to the attention of the specification committee.
 
 [#efspo-ballot-progress]
 === Progress Review Ballot Template
@@ -565,8 +591,10 @@ Per the process, this will be a `<duration>` day ballot, ending on `<date>` that
 Specification committee representatives, your vote is hereby requested. Please respond with pass:[+1] (positive), pass:[+0] (abstain), or pass:[-1] (reject).  Any feedback that you can provide to support your vote will be appreciated.
 ____
 
-A progress review ballot should include:
+The `<details>` for a xref:efspo-reviews-release[progress review] ballot should include:
 
+* Links to relevant source code repositories;
+* Links to milestone build artifacts (if any);
 * A description of the progress made on implementing the release plan to-date;
 * A description of changes (if any) to the release plan; and
 * A description of issues (if any) that may be impeding progress.
@@ -589,10 +617,7 @@ Per the process, this will be a `<duration>` day ballot, ending on `<date>` that
 Specification committee representatives, your vote is hereby requested. Please respond with pass:[+1] (positive), pass:[+0] (abstain), or pass:[-1] (reject).  Any feedback that you can provide to support your vote will be appreciated.
 ____
 
-[#efspo-ballot-details]
-=== Details
-
-The `<details>` should concisely describe the changes that are proposed. This could be as simple as a statement stating that "The Eclipse Foo project will be converted into a specification project.", but other changes may be included.
+[[efspo-ballot-details]]The `<details>` for a xref:efspo-reviews-restructuring[restructuring review] should concisely describe the changes that are proposed. This could be as simple as a statement stating that "The Eclipse Foo project will be converted into a specification project.", but other changes may be included.
 
 For example:
 
