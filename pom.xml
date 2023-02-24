@@ -106,19 +106,6 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>asciidoc-to-html-faq</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>process-asciidoc</goal>
-						</goals>
-						<configuration>
-							<sourceDocumentName>faq.adoc</sourceDocumentName>
-							<headerFooter>false</headerFooter>
-							<attributes>
-							</attributes>
-						</configuration>
-					</execution>
-					<execution>
 						<id>asciidoc-to-html-specializing</id>
 						<phase>generate-resources</phase>
 						<goals>
@@ -167,6 +154,28 @@
 						<configuration>
 							<backend>pdf</backend>
 							<sourceDocumentName>efsp.adoc</sourceDocumentName>
+							<sourceHighlighter>rouge</sourceHighlighter>
+							<attributes>
+								<doctype>book</doctype>
+								<icons>font</icons>
+								<imagesoutdir>.</imagesoutdir>
+								<imagesdir>.</imagesdir>
+								<pagenums />
+								<toc />
+								<idprefix />
+								<idseparator>-</idseparator>
+							</attributes>
+						</configuration>
+					</execution>
+					<execution>
+						<id>generate-book</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>process-asciidoc</goal>
+						</goals>
+						<configuration>
+							<backend>docbook5</backend>
+							<sourceDocumentName>efsp-book.adoc</sourceDocumentName>
 							<sourceHighlighter>rouge</sourceHighlighter>
 							<attributes>
 								<doctype>book</doctype>

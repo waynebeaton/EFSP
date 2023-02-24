@@ -1,0 +1,39 @@
+= The Eclipse Foundation Specification Process
+:doctype: book
+
+include::config.adoc[]
+
+toc::[]
+
+[colophon]
+== Colophon
+
+(C) 2023 by The Eclipse Foundation
+
+Published in the Milky Way Galaxy.
+
+This book is designed by Wayne Beaton
+
+[dedication]
+== Dedication
+
+To The Eclipse Community.
+
+== Process
+
+include::process.adoc[leveloffset+1]
+
+== Operations
+
+This operations guide applies to the Eclipse Foundation Specification Process, version {revnumber}. Updated {docdate}.
+
+include::content/operations-inc.adoc[leveloffset=+1]
+
+include::content/faq-inc.adoc[leveloffset=+1]
+
+== Appendix A: Patents and Specifications
+
+include::content/patents-inc.adoc[leveloffset=+0]
+
+== Appendix B: IP Flows
+include::ip-flows-inc.adoc[leveloffset=+1]
