@@ -446,16 +446,76 @@ Releases of specification projects operate under the EDP augmented by the EFSP. 
 See {handbookReleaseAndProgressReviewsUrl}[release and progress reviews] for a more complete description of the release review process.
 ====
 
-It is up to the individual parties to determine the basis on which they will vote in the ballot. When determining how to vote in a release review ballot, the question that specification committee members must consider is whether or not they believe that the specification as written can be implemented, that the TCK is complete enough, and whether or not the project team has met their obligations under the EFSP. If the answer is yes, then the specification committee member should vote in the affirmative `pass:[+1]`; they should either vote in the negative `pass:[-1]` or abstain `pass:[+0]` otherwise.
+[[efspo-review-timeline]]The basic timeline for a release review is as follows.
+
+.Release Review Timeline and Steps
+[graphviz, images/plan_review, svg]
+----
+digraph {
+	bgcolor=transparent;
+	rankdir=TB;
+	
+	node [shape=box,style=filled,fillcolor=white,fontsize=12];
+	coordinate[label="Project Team\ncoordinates with\nSpecification Committee"];
+	emo[label="Engage\nEMO"]
+
+	start_review[label="Start\nReview"];
+	ip_review[label="Intellectual Property\nReview (EMO)"];
+	ballot[label="Specification Committee\nBallot"];
+	pmc_approval[label="PMC Approval"];
+	community_review[ shape="box"; label="Community Review\n📆 One Week" ];
+	end_review[label="Success"];
+
+	coordinate -> emo;
+	emo -> start_review;
+	start_review -> ip_review;
+	ip_review -> end_review;
+	start_review -> ballot;
+	ballot -> end_review;
+	start_review -> pmc_approval;
+	pmc_approval -> end_review;
+	start_review -> community_review;
+	community_review -> end_review;
+}
+----
+
+The review itself involves several parallel activities:
+
+* The EMO will review the intellectual property management practices of the project to ensure that the {ipPolicyUrl}[Eclipse Foundation Intellectual Property Policy] and {handbookIpUrl}[Intellectual Property Due Diligence process] is being correctly implemented by the project team (and will provide guidance as necessary);
+* The EMO ensure that standard documentation (e.g., `README`, `CONTRIBUTING`, and `LICENSE` files) are present in project repositories (and will provide guidance as necessary);
+* The EMO will seek the PMC's approval via their mailing list (the PMC has their own criteria for approval; the EMO will accept a `pass:[+1]` from any PMC member as approval); and
+* The Specification Committee will initiate and complete the required ballot.
+
+While the above chart shows that the ballot occurs after the review starts, the ballot can be initiated at any time. The requirement is that the ballot must conclude with an affirmative result before the review can be declared successful.
+
+It is up to the individual parties to determine the basis on which they will vote in the ballot. When determining how to vote, the question that specification committee members must consider is whether or not they believe that the specification as written can be implemented, that the TCK is complete enough, and whether or not the project team has met their obligations under the EFSP. If the answer is yes, then the specification committee member should vote in the affirmative `pass:[+1]`; they should either vote in the negative `pass:[-1]` or abstain `pass:[+0]` otherwise.
 
 [#efspo-reviews-progress]
 === Progress Reviews
 
-A progress review is required by a specification project when the time elapsed between a plan review and a release review exceeds one year.
+A progress review is required by a specification project when the time elapsed between a xref:efspo-reviews-plan[Plan Review] and a xref:efspo-reviews-release[Release Review] exceeds one year.
 
-Progress reviews are tracked and managed by the EMO. A progress review requires a <<efsp-operations-ballot,ballot>> of the specification committee. The ballot may be initiated directly by a member of the specification committee; the EMO can provide assistance if required.
+Progress reviews are tracked and managed by the EMO. A progress review requires a xref:efsp-operations-ballot[ballot] of the specification committee. The ballot may be initiated directly by a member of the specification committee; the EMO can provide assistance if required.
+
+The specification committee may make additional requirements. The specification project team should communicate their intent to engage in a progress review with the specification committee in advance to ensure that any additional requirements are addressed and that the specification committee has an opportunity to ask questions and otherwise provide guidance in advance of the initiation of the ballot.
+
+[TIP]
+====
+The xref:efspo-review-timeline[timeline] for a progress review is similar to that for a release review.
+====
+
+Before initiating a Progress Review, the specification project team and specification committee need to coordinate and discuss the state of the specification work, and decide on what--if any--mitigation work is required. This discussion should occur on a public channel (either on an issue in a a public project or working group issue tracker, or on the specification committee's public mailing list). The process can be initiated by a specification project committer, a PMC member, or a working group representative. The specification project team and specification committee should reach agreement on the state of the project and any mitigation that is required before initiating the Progress Review.
+
+With the conditions established, a project committer must contact the {emoEmail}[EMO] to initiate the review. 
+
+[TIP]
+====
+From the EMO's perspective, a Progress Review is primarily concerned with assisting the project. That is, the EMO regards a Progress Review as an opportunity to provide guidance to the project regarding how to implement the {edpUrl}[Eclipse Foundation Development Process], {efspUrl}[Eclipse Foundation Specification Process], and {ipPolicyUrl}[Eclipse Foundation Intellectual Property Policy]. This is a means of providing guidance and assistance, not enforcement.
+====
 
 When determining how to vote in a release review ballot, the question that specification committee members must consider is whether or not they believe that the specification is progressing in a manner that will produce a specification that can later be ratified. If the answer is yes, then the specification committee member should vote in the affirmative `pass:[+1]`; they should either vote in the negative `pass:[-1]` or abstain `pass:[+0]` otherwise.
+
+Progress Reviews are posted for community review for one week.
 
 [#efspo-ballots]
 == Ballots
@@ -470,13 +530,13 @@ The following templates can be modified accordingly and used to initiate a ballo
 
 [NOTE]
 ====
-The ballot initiation message does not need to follow these templates; they are provided here only as a convenience.
+The ballot initiation message does not need to follow these templates; they are provided here only as examples.
 ====
 
 [#efspo-ballot-release]
 === Release Review Ballot Template
 ____
-Title: BALLOT: Approval to Release the `<specification>` Specification Project
+Title: BALLOT: `<specification>` Specification Project Release Review
 
 Your vote is required to approve and ratify the release of `<specification>`.
 
@@ -488,6 +548,28 @@ Per the process, this will be a `<duration>` day ballot, ending on `<date>` that
 
 Specification committee representatives, your vote is hereby requested. Please respond with pass:[+1] (positive), pass:[+0] (abstain), or pass:[-1] (reject).  Any feedback that you can provide to support your vote will be appreciated.
 ____
+
+[#efspo-ballot-progress]
+=== Progress Review Ballot Template
+____
+Title: BALLOT: `<specification>` Specification Project Progress Review
+
+Your vote is required to approve the continuation of work on the `<specification>` specification release plan.
+
+The Eclipse Foundation Specification Process (EFSP) requires a successful ballot of the specification committee in order to continue work on specifications when the time elapsed between the plan review and corresponding release review exceeds one year.
+
+`<details>`
+
+Per the process, this will be a `<duration>` day ballot, ending on `<date>` that requires a super-majority positive vote of the `<working-group>` specification committee members (note that there is no veto). Community input is welcome, but only votes cast by specification committee representatives will be counted.
+
+Specification committee representatives, your vote is hereby requested. Please respond with pass:[+1] (positive), pass:[+0] (abstain), or pass:[-1] (reject).  Any feedback that you can provide to support your vote will be appreciated.
+____
+
+A progress review ballot should include:
+
+* A description of the progress made on implementing the release plan to-date;
+* A description of changes (if any) to the release plan; and
+* A description of issues (if any) that may be impeding progress.
 
 [#efspo-ballot-restructure]
 === Restructuring Review Ballot Template
@@ -620,7 +702,7 @@ In order to be able to claim compatibility with a specification, the {tckLicense
 
 [NOTE]
 ====
-The TCK inbox has a perpetual autoresponder that says (in part): "If your message contains a link to your TCK test results showing full and complete satisfaction of all requirements as required by the Eclipse Foundation's TCK License, you may consider that requirement of the TCK License complete." It also includes links to the various branding programmes. The Eclipse Foundation does review the messages send to this inbox, but -- other than the autoreponder -- we never reply to messages sent to this inbox.
+The TCK inbox has a perpetual autoresponder that says (in part): "If your message contains a link to your TCK test results showing full and complete satisfaction of all requirements as required by the Eclipse Foundation's TCK License, you may consider that requirement of the TCK License complete." It also includes links to the various branding programmes. The Eclipse Foundation does review the messages send to this inbox, but--other than the autoreponder--we never reply to messages sent to this inbox.
 
 Direct any questions that you have about the license to {licenseEmail}.
 ====
