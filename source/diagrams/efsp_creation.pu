@@ -1,0 +1,54 @@
+@startuml
+!pragma teoz true
+
+actor ProjectTeam
+actor EMO
+actor PMC
+actor Community
+actor SpecificationCommittee
+actor SteeringCommittee
+
+participant "Specification\nProject\nProposal" as Proposal
+participant "Community\nReview" as CommunityReview
+participant "Creation\nReview" as CreationReview
+participant "Creation\nBallot" as Ballot
+
+ProjectTeam -> Proposal : author
+ProjectTeam -> EMO: Submit Proposal
+
+== Start Community Review ==
+EMO -> PMC : Notify
+EMO -> SpecificationCommittee : Notify
+EMO -> Community : Notify
+{start_community_review} EMO -> CommunityReview : start
+activate CommunityReview
+
+PMC -> ProjectTeam : feedback
+SpecificationCommittee -> ProjectTeam : feedback
+Community -> ProjectTeam :feedback
+ProjectTeam -> Proposal : update
+
+alt when patent license does not match default
+SpecificationCommittee -> SteeringCommittee ++ : request approval
+SteeringCommittee -> SteeringCommittee : vote
+return approval
+end
+
+{end_community_review} EMO -> CommunityReview : end
+deactivate CommunityReview
+
+== Start Creation Review ==
+{start_creation_review} EMO -> CreationReview ++ : start
+EMO -> PMC ++ : request approval
+return approval
+EMO -> SpecificationCommittee: request ballot
+activate SpecificationCommittee
+SpecificationCommittee -> Ballot : start
+activate Ballot
+SpecificationCommittee -> Ballot : vote
+return approval
+return approval
+
+{end_creation_review} EMO -> CreationReview : end
+deactivate CreationReview
+@enduml

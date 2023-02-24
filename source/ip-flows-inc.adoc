@@ -19,7 +19,7 @@ This FAQ provides a general overview of the Eclipse Foundation’s specification
 - {tckLicenseUrl}[Eclipse Foundation Technology Compatibility Kit License]
 
 [#efsp-ipflows-faq]
-== Frequently Asked Questions
+= Frequently Asked Questions
 
 Does the Eclipse Foundation produce specifications today?  ::
 

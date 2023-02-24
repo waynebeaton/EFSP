@@ -8,10 +8,46 @@
  * SPDX-License-Identifier: EPL-2.0
 ////
 
-[[efsp-faq]]
+[[efspo-faq]]
 = Frequently Asked Questions
 
 [qanda]
+Is a specification project is a subtype of a Eclipse project, governed by the EDP? ::
+
+In a mathematical sense, yes. A specification project as defined by the EFSP is a specialization or subtype of an Eclipse open source project as defined by the EDP.
+
+Does a specification need to list patents? ::
+
+No. In fact, a specification _must not_ specifically list patents.
+
+How do patent grants work? ::
+
+We cannot provide legal advice. Connect with your lawyer for more information.
+
+Can a working group's steering committee take on the responsibilities of the specification committee? ::
+
+Yes. A working group's charter can assign the responsibilities of the specification committee to any working group committee.
+
+The ability of a member participant (i.e., a participant representing a company) to appoint a _participant representative_ committer isn't very meritocratic; is meritocracy irrelevant? ::
+
+Meritocracy is very relevant. However, the rules of engagement with specification projects is different in consideration of factors like patent grants and antitrust. In the case of specifications, vendor-neutrality trumps meritocracy: a specification process must be accessible to all *companies* who wish to participate.
+
+Can a member participant (i.e., a participant representing a company) appoint as many _participant representative_ committers as they'd like? ::
+
+No. A member participant (i.e., a company that is a participant in the working group) can appoint a single participant representative committer on a specification project, and only if they do not already have a committer representing their interests on that project. Additional committers representing the interests of a member participant may demonstrate merit through contribution and be elected to the project using the standard mechanism for {handbookCommitterElectionsUrl}[electing committers].
+
+Is a participant representative a special kind of committer? ::
+
+A participant representative is indistinguishable from any other committer once appointed.
+
+Do participant representatives have any special powers or privileges? ::
+
+No. Participant representatives have exactly the same privileges and responsibilities as any other committer.
+
+Will a participant representative be retired from a specification project when they change employers? ::
+
+No. A participant representative is indistinguishable from any other committer and so retains their committer status even after changing employers. After changing employers, a committer may require new committer agreements, but once those are in place, the committer retains all privileges. In the event that a committer changing employers leaves a member participant unrepresented, that member participant may appoint a new participant representative.
+
 How does the role of the Specification Committee differ from the role of the PMC? ::
 
 The Project Management Committee (PMC) manages the technical governance process, and provides oversight. It ensures that the open source rules of engagement are observed and the Eclipse Development Process (EDP) as a whole is followed. It participates in the Intellectual Property Due Diligence Process to ensure that requests for review are technically sound (for example, to ensure that the use of third-party content makes technical sense). The PMC provides best practices. It tends to work more at the development and technical level.
@@ -55,9 +91,9 @@ The Specification Committee should provide best practices to Specification Proje
 
 What is the difference between a Specification Version and a Final Specification? ::
 
-A Specification Version is produced by a release cycle, then becomes a Final Specification when it is Ratified (under the Eclipse Foundation Specification License (EFSL)).
+A Specification Version is produced by a release cycle, then becomes a Final Specification when it is Ratified and distributed under the Eclipse Foundation Specification License (EFSL).
 +
-The intellectual property rights required to build a compatible implementation flow from the Final Specification. That is, in order to be considered a Compatible Implementation and benefit from the intellectual property protections provided by the Eclipse Foundation Specification Agreement, an implementation must be based on a final specification. No claims regarding compatibility may be made for an implementation milestone build or unratified Specification Version.
+The intellectual property rights required to build a Compatible Implementation flow from the Final Specification. That is, in order to be considered a Compatible Implementation and benefit from the intellectual property protections, an implementation must be based on a final specification. No claims regarding compatibility may be made for an implementation based on a milestone build or unratified Specification Version.
 
 What types of changes are not appropriate for a Service Release? ::
 
@@ -65,14 +101,4 @@ Changes to method signatures or additions of new methods or behavior (for exampl
 
 Are Specification Projects required to implement the Eclipse IP Policy and engage in the Eclipse IP Due Diligence Process? ::
 
-Yes. 
-
-When we transmogrify a specification into a Final Specification, we set the copyright holder on the specification document to the Eclipse Foundation, and make that document available under the Eclipse Foundation Specification License. How do we do this? That is, by what legal mechanism do we have the ability to do this? ::
-
-Eclipse Foundation specifications are composed of many contributions, licensed to the Eclipse Foundation via committer and contributor agreements by various authors who maintain ownership of their contributions. When a Specification Project and its related Specification Committee goes through the process of selecting, coordinating, and arranging all these various contributions into a single and final document, this compilation is protected by U.S. copyright law and the rights in it are is owned by the Eclipse Foundation -- even though the rights in each individual contribution remains owned by its contributor. The Eclipse Foundation can make the document available under the Eclipse Foundation Specification License based on the following grant provided for in the Eclipse Contributor Agreement and the Eclipse Foundation's committer agreements:
-+
-----
-...You grant a non- exclusive, worldwide, perpetual, royalty-free license of all necessary rights under Your copyright in and to Your Contributions (the “Specification Grant”): (a) for the Eclipse Foundation (and its contributors solely as a part of foundation projects) to create, reproduce, prepare derivative works of, publicly display, publicly perform, distribute and sublicense specifications subject to the terms of the then-current Eclipse Foundation Specification License...
-----
-+
-By asserting copyright ownership on the specification documents, the Eclipse Foundation has the ability to protect the specifications in the event that a third party fails to follow the terms of the Eclipse Foundation Specification License.
+Yes.
