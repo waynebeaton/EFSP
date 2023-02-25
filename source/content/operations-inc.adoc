@@ -263,7 +263,7 @@ To open the proposal for community review, send a note to the {emoEmail}EMO. The
 
 Immediately after opening a specification project proposal for community review, the EMO will request approval from the corresponding xref:efspo-roles-pmc[PMC] and inform the corresponding specification committee.
 
-The EMO will connect with the PMC via their mailing list request their approval. With their approval, the PMC indicates that they believe that the scope of the specification project fits in with the overall mission and scope of the top-level project and that they are prepared to provide guidance to the project team and participate in the specification project's governance as required by the Eclipse Foundation Development Process. The EMO will accept a `pass::[+1]` from any member of the PMC as approval on behalf of the entire PMC. PMC approval is required _before_ the start of the xref:efspo-reviews-creation[creation review].
+The EMO will connect with the PMC via their mailing list request their approval. With their approval, the PMC indicates that they believe that the scope of the specification project fits in with the overall mission and scope of the top-level project and that they are prepared to provide guidance to the project team and participate in the specification project's governance as required by the Eclipse Foundation Development Process. The EMO will accept a `pass:[+1]` from any member of the PMC as approval on behalf of the entire PMC. PMC approval is required _before_ the start of the xref:efspo-reviews-creation[creation review].
 
 [#efspo-implementing]
 == Implementing the EFSP
